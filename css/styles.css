@@ -189,7 +189,7 @@ body {
 
 .button:hover,
 .button:focus {
-  color: var(--btn-hov-foc-color);
+  background-color: #188ce8;
 }
 
 .overlay {
