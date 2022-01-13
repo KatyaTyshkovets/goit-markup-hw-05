@@ -165,7 +165,7 @@ body {
   background: var(--btn-hov-foc-color);
   content: "";
   border-radius: 2px;
-  bottom: -200%;
+  bottom: -32px;
   left: 0;
   opacity: 0;
   transition: opacity 250ms var(--timing-fuction);
@@ -641,7 +641,7 @@ body {
   position: absolute;
   display: flex;
   bottom: 0;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms var(--timing-fuction);
   background: rgba(33, 150, 243, 0.9);
   width: 100%;
@@ -667,17 +667,18 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms var(--timing-fuction);
+  transition: opacity 250ms var(--timing-fuction),
+    visibility 250ms var(--timing-fuction);
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1) rotate(-25deg);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-fuction);
 
   min-width: 528px;
@@ -693,8 +694,7 @@ body {
   visibility: hidden;
 }
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9) rotate(-25deg);
-  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.9);
 }
 .button-modal {
   position: absolute;
@@ -707,4 +707,5 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
   justify-content: center;
+  margin: 8px;
 }
